@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Restaurante</string>
+    <string name="restaurante_el_programa">Restaurante El Programa</string>
+    <string name="seleccione_las_ordenes_del_pedido">Seleccione las ordenes del pedido</string>
+    <string name="para_aqui">Para AQUI</string>
+    <string name="arroz_huevo_frito">Arroz huevo frito</string>
+    <string name="coste_total">Coste Total</string>
+    <string name="cerveza_3">cerveza 3$</string>
+    <string name="chicheme_2">Chicheme 2$</string>
+    <string name="chicha_2">Chicha 2$</string>
+    <string name="agua_1">Agua 1$</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="patacon_con_carne">Patacon con carne</string>
+    <string name="sandwich">Sandwich</string>
+    <string name="tamales">Tamales</string>
+    <string name="ce">CE</string>
+    <string name="para_llevar">Para llevar</string>
+    <string name="desayunos">Desayunos</string>
+    <string name="nose">nose</string>
+    <string name="cena">Cena</string>
+    <string name="sancocho">Sancocho</string>
+    <string name="hamburguesa">Hamburguesa</string>
+    <string name="arroz_y_pollo_4">Arroz y pollo 4$</string>
+    <string name="arroza_y_carne_5">arroza y carne 5$</string>
+    <string name="almuerzo">Almuerzo</string>
+    <string name="panckakes_4">Panckakes 4$</string>
+    <string name="salchicha_y_hojaldre_3">salchicha y hojaldre 3$</string>
+    <string name="bacon_y_huevos_5">bacon y huevos 5$</string>
+    <string name="huevos_revueltos_3">Huevos revueltos 3$</string>
+    <string name="nose1">nose1</string>
+    <string name="calcular">Calcular</string>
+    <string name="nose2">nose2</string>
+    <string name="todo">TODO</string>
+    <string name="sancocho_3">sancocho 3$</string>
+    <string name="hamburguesa_7">Hamburguesa 7$</string>
+    <string name="tamales_2">Tamales 2$</string>
+    <string name="sandwich_2_50">Sandwich 2.50</string>
+    <string name="arroz_huevo_frito_3">Arroz huevo frito 3$</string>
+    <string name="patacon_con_carne_4">Patacon con carne 4</string>
+    <string name="azul_marino">azul marino</string>
+    <string name="patacon_con_carne_4_50">patacon con carne 4.50$</string>
+    <string name="realizar">Realizar</string>
+    <string name="facturas">Facturas</string>
+
+
+    <string-array name="spinner_items">
+        <item> . </item>
+        <item> Facturar </item>
+
+    </string-array>
+
+
+</resources>
