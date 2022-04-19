@@ -1,7 +1,6 @@
 package com.example.restaurante;
 
 import android.annotation.SuppressLint;
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Intent;
@@ -29,18 +28,31 @@ import Utilidades.Utilidades;
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     CheckBox op1,op2,op3,op4,op5,op6,op7,op8,op9,op10,op11,op12,op13,op14,op15,op16;
+
     Button aFacturas;
+
     TextView total;
+
     Spinner aSpinner;
+
+    //Se elige el formato para obtener la fecha excacta a traves del dispositivo
+    @SuppressLint("SimpleDateFormat")
+    SimpleDateFormat Fe = new SimpleDateFormat(" dd/MM/yyyy ");
+    String Fecha_actual = Fe.format(new Date());
+
+    //Se elige el formato para obtener la Hora excacta a traves del dispositivo
     @SuppressLint("SimpleDateFormat")
     SimpleDateFormat sdf = new SimpleDateFormat(" HH:mm ");
     String hora_actual = sdf.format(new Date());
+
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ConexionSQLiteHelper conn= new ConexionSQLiteHelper(this,"bd_pedidos",null,1);
+
+        //Declaracion de variables para los datos
 
         aSpinner = findViewById(R.id.spinner);
         aSpinner.setOnItemSelectedListener(this);
@@ -71,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
-
+        //Metodo para calcular en la interfaz de usuario el precio de los pedidos
     @SuppressLint("SetTextI18n")
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void  Calcular (View v){
@@ -153,12 +165,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         String Eleccion = aSpinner.getSelectedItem().toString();
 
+        //se declara que el spinner estar en la opcion "Facturar" al presionar al boton debe enviar a la base de datos, los datos para llenar los campos
         if(Eleccion.equals("Facturar")){
 
             SQLiteDatabase db = conn.getWritableDatabase();
 
-            String insert = "INSERT INTO "+Utilidades.TABLA_Pedidos+"("+Utilidades.Campo_platos_pedidos+","+Utilidades.Campo_hora+","+Utilidades.Campo_total+")" +
-                    "Values ('"+Prueba+"','"+hora_actual+"',"+Ttotal+")";
+            String insert = "INSERT INTO "+Utilidades.TABLA_Pedidos+"("+Utilidades.Campo_platos_pedidos+","+Utilidades.Campo_Fecha_pedido+","+Utilidades.Campo_hora+","+Utilidades.Campo_total+")" +
+                    "Values ('"+Prueba+
+                    "','"+Fecha_actual+
+                    "','"+hora_actual+
+                    "',"+Ttotal+")";
 
             db.execSQL(insert);
 
@@ -170,6 +186,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
+    //Limpia las elecciones de checkbox
     @SuppressLint("SetTextI18n")
     public void Ce (View v){
 
@@ -208,6 +225,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         total.setText("Coste Total:   ");
     }
 
+
+    //adaptar las elecciones del spinner para ser vistas
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         Toast.makeText(this,adapterView.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
@@ -218,6 +237,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
+
+    // Metodo para la notificacion y ser mostrada donde se construye
     public   void notoficacion(){
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){

@@ -41,6 +41,15 @@
     <string name="patacon_con_carne_4_50">patacon con carne 4.50$</string>
     <string name="realizar">Realizar</string>
     <string name="facturas">Facturas</string>
+    <string name="dia">Dia</string>
+    <string name="mes">Mes</string>
+    <string name="a_o">Año</string>
+    <string name="button">Button</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="busqueda_avanzada">Busqueda avanzada</string>
+    <string name="buscar">Buscar</string>
+    <string name="id">ID</string>
+    <string name="datos">DATOS</string>
 
 
     <string-array name="spinner_items">

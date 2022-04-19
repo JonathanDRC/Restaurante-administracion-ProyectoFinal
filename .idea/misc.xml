@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/narut/AndroidStudioProjects/Restaurante/app/src/main/res/layout/activity_busqueda_avanzada.xml" value="0.264" />
         <entry key="..\:/Users/narut/AndroidStudioProjects/Restaurante/app/src/main/res/layout/activity_consultar_facturas.xml" value="0.264" />
-        <entry key="..\:/Users/narut/AndroidStudioProjects/Restaurante/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/narut/AndroidStudioProjects/Restaurante/app/src/main/res/layout/activity_main.xml" value="0.4" />
       </map>
     </option>
   </component>

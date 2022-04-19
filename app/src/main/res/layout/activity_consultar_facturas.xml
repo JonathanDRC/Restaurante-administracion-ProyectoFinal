@@ -29,7 +29,65 @@
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/Test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/PLDIA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@string/dia" />
+
+            <EditText
+                android:id="@+id/PLMES"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@string/mes" />
+
+            <EditText
+                android:id="@+id/PLAÑO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@string/a_o" />
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Filtro"
+                android:layout_width="253dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buscar" />
+
+            <Button
+                android:id="@+id/RE"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:text="@string/limpiar" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ADS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/busqueda_avanzada" />
 
     </LinearLayout>
 </ScrollView>
